@@ -203,6 +203,7 @@ type Transaction struct {
 	OrderLineItemID     string
 	ExtendedOrderID     string
 	eBayPlusTransaction bool
+	Buyer               Buyer
 }
 type TransactionArray struct {
 	XMLName      xml.Name      `xml:"TransactionArray"`
@@ -429,4 +430,10 @@ type CheckoutStatus struct {
 	PaymentInstrument                   string
 	PaymentMethod                       string
 	Status                              string
+}
+
+type Buyer struct {
+	Email         string
+	UserFirstName string
+	UserLastName  string
 }
