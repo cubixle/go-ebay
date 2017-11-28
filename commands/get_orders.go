@@ -106,7 +106,7 @@ type ListingDetails struct {
 type SellingStatus struct {
 	CurrentPrice float64
 	BidCount     string
-	QuantitySold string
+	QuantitySold int
 }
 
 type GetOrdersRequestResponse struct {

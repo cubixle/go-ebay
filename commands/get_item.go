@@ -44,14 +44,21 @@ type GetItemResponse struct {
 }
 
 type ItemResponse struct {
-	Title                       string         `xml:"Title"`
-	Description                 string         `xml:"Description"`
-	ItemID                      string         `xml:"ItemID"`
-	ViewItemURLForNaturalSearch string         `xml:"ViewItemURLForNaturalSearch"`
-	PictureDetails              PictureDetails `xml:"PictureDetails"`
-	Quantity                    string         `xml:"Quantity"`
-	SellingStatus               SellingStatus  `xml:"SellingStatus"`
+	Title                       string                `xml:"Title"`
+	Description                 string                `xml:"Description"`
+	ItemID                      string                `xml:"ItemID"`
+	SKU                         string                `xml:"SKU"`
+	ViewItemURLForNaturalSearch string                `xml:"ViewItemURLForNaturalSearch"`
+	PictureDetails              PictureDetails        `xml:"PictureDetails"`
+	Quantity                    int                   `xml:"Quantity"`
+	SellingStatus               SellingStatus         `xml:"SellingStatus"`
+	ProductListingDetails       ProductListingDetails `xml:"ProductListingDetails"`
 }
 
 type PictureDetails struct {
+}
+
+type ProductListingDetails struct {
+	BrandMPN BrandMPN `xml:"BrandMPN"`
+	EAN      string   `xml:"EAN"`
 }
