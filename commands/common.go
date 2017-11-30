@@ -38,7 +38,8 @@ type Storefront struct {
 
 type ProductListingDetails struct {
 	UPC      string
-	BrandMPN BrandMPN
+	BrandMPN BrandMPN `xml:"BrandMPN"`
+	EAN      string   `xml:"EAN"`
 }
 
 type PrimaryCategory struct {
@@ -55,7 +56,8 @@ type NameValueList struct {
 }
 
 type BrandMPN struct {
-	Brand, MPN string
+	Brand string `xml:"Brand"`
+	MPN   string `xml:"MPN"`
 }
 
 type BestOfferDetails struct {

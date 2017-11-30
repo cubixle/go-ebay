@@ -57,8 +57,3 @@ type ItemResponse struct {
 
 type PictureDetails struct {
 }
-
-type ProductListingDetails struct {
-	BrandMPN BrandMPN `xml:"BrandMPN"`
-	EAN      string   `xml:"EAN"`
-}
