@@ -3,7 +3,7 @@ package commands
 import (
 	"encoding/xml"
 
-	"github.com/cubixle/go-ebay/config"
+	"github.com/cubixle2/go-ebay/config"
 )
 
 // NewGetOrdersRequest returns struct

@@ -3,10 +3,11 @@ package commands
 import (
 	"encoding/xml"
 
-	"github.com/cubixle/go-ebay/config"
+	"github.com/cubixle2/go-ebay/config"
+	"github.com/cubixle2/go-ebay/types"
 )
 
-func NewReviseItemRequest(cfg *config.Config, item ItemResponse) *ReviseItemRequest {
+func NewReviseItemRequest(cfg *config.Config, item *types.Item) *ReviseItemRequest {
 	return &ReviseItemRequest{
 		Item: item,
 		RequesterCredentials: RequesterCredentials{
@@ -17,7 +18,7 @@ func NewReviseItemRequest(cfg *config.Config, item ItemResponse) *ReviseItemRequ
 }
 
 type ReviseItemRequest struct {
-	Item                 ItemResponse
+	Item                 *types.Item          `xml:"Item"`
 	Xmlns                string               `xml:"xmlns,attr"`
 	RequesterCredentials RequesterCredentials `xml:"RequesterCredentials"`
 }

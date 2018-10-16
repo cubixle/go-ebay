@@ -21,7 +21,7 @@ func execute(request *Request) ([]byte, error) {
 	xmlBody := []byte("<?xml version=\"1.0\" encoding=\"utf-8\"?>")
 	xmlBody = append(xmlBody, request.Command.GetRequestBody()...)
 	body := bytes.NewReader(xmlBody)
-
+	// panic(string(xmlBody))
 	req, _ := http.NewRequest(
 		"POST",
 		fmt.Sprintf("%s/ws/api.dll", config.BaseUrl),
@@ -49,6 +49,10 @@ func execute(request *Request) ([]byte, error) {
 
 		return []byte{}, fmt.Errorf("<%d> - %s", resp.StatusCode, rspBody)
 	}
+
+	reqBody, _ := ioutil.ReadAll(resp.Request.Body)
+
+	log.Println(string(reqBody))
 
 	rspBody, _ := ioutil.ReadAll(resp.Body)
 

@@ -1,8 +1,8 @@
 package ebay
 
 import (
-	"github.com/cubixle/go-ebay/commands"
-	"github.com/cubixle/go-ebay/config"
+	"github.com/cubixle2/go-ebay/commands"
+	"github.com/cubixle2/go-ebay/config"
 )
 
 const xmlns = "urn:ebay:apis:eBLBaseComponents"

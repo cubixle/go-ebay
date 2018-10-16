@@ -3,7 +3,7 @@ package commands
 import (
 	"encoding/xml"
 
-	"github.com/cubixle/go-ebay/config"
+	"github.com/cubixle2/go-ebay/config"
 )
 
 func NewGetMyEbaySelling(cfg *config.Config, version string, pageNumber string, perPage string) *GetMyeBaySellingRequest {

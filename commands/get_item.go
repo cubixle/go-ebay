@@ -3,7 +3,7 @@ package commands
 import (
 	"encoding/xml"
 
-	"github.com/cubixle/go-ebay/config"
+	"github.com/cubixle2/go-ebay/config"
 )
 
 func NewGetItemRequest(cfg *config.Config, itemID string) *GetItemRequest {
@@ -53,6 +53,9 @@ type ItemResponse struct {
 	Quantity                    int                   `xml:"Quantity"`
 	SellingStatus               SellingStatus         `xml:"SellingStatus"`
 	ProductListingDetails       ProductListingDetails `xml:"ProductListingDetails"`
+	ConditionID                 int                   `xml:"ConditionID"`
+	Country                     string                `xml:"country"`
+	Currency                    string                `xml:"Currency"`
 }
 
 type PictureDetails struct {
