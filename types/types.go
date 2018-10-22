@@ -42,6 +42,8 @@ type Item struct {
 		} `xml:"Compatibility"`
 	} `xml:"ItemCompatibilityList,omitempty"`
 
+	ItemID string `xml:"ItemID,omitempty"`
+
 	ItemSpecifics ItemSpecifics `xml:"ItemSpecifics"`
 
 	ListingDesigner *struct {
