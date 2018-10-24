@@ -10,8 +10,7 @@ import (
 func NewGetOrdersRequest(cfg *config.Config, CreateTimeFrom string,
 	CreateTimeTo string,
 	OrderRole string,
-	SortingOrder string,
-	Version string) *GetOrdersRequest {
+	SortingOrder string) *GetOrdersRequest {
 
 	return &GetOrdersRequest{
 		CreateTimeFrom: CreateTimeFrom,
@@ -22,7 +21,7 @@ func NewGetOrdersRequest(cfg *config.Config, CreateTimeFrom string,
 			EBayAuthToken: cfg.AuthToken,
 		},
 		Xmlns:   "urn:ebay:apis:eBLBaseComponents",
-		Version: Version,
+		Version: "1077",
 	}
 }
 
